@@ -5,7 +5,7 @@ import { Hero } from '../interfaces/hero.type';
 })
 export class SortByPipe implements PipeTransform {
 
-  transform(heroes: Hero[], sortBy: keyof Hero | null = null): Hero[] {
+  transform(heroes: Hero[], sortBy?: keyof Hero | ''): Hero[] {
     
     switch ( sortBy ){
       case "name":
